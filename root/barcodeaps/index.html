@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator with Logo</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Memuat library QR Code -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator with Logo</h1>
+        <p>Masukkan beberapa data yang ingin digabungkan menjadi QR code:</p>
+        
+        <div class="input-group">
+            <input type="text" id="inputData1" placeholder="Masukkan nama">
+        </div>
+        <div class="input-group">
+            <input type="text" id="inputData2" placeholder="Masukkan kode">
+        </div>
+        <div class="input-group">
+            <input type="text" id="inputData3" placeholder="Masukkan data tambahan (opsional)">
+        </div>
+
+        <!-- <div class="company-name">
+            <input type="text" id="companyName" placeholder="Masukkan nama perusahaan">
+        </div> -->
+
+        <button onclick="generateQRCode()">Buat QR Code</button>
+
+        <!-- Tempat untuk menggambar QR code menggunakan canvas -->
+        <div id="qrContainer" class="qr-container">
+            <canvas id="qrCode"></canvas>
+        </div>
+
+        <a id="downloadLink" href="#" style="display:none;">
+            <button id="downloadBtn">Unduh PNG</button>
+        </a>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
